@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', 'SMSController@compose');
+Route::get('/', 'App\Http\Controllers\SMSController@compose');
+Route::post('send/sms', 'App\Http\Controllers\SMSController@sendSMS')->name('send.sms');
+Route::get('sms/response', 'App\Http\Controllers\SMSController@smsResponse')->name('sms.response');
