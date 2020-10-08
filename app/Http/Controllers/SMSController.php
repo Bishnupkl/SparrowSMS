@@ -42,7 +42,7 @@ class SMSController extends Controller
         if ($status_code == 200) {
             return redirect()->route('sms.response')->with('success', 'SMS sent succesfully');
         } else {
-            return redirect()->route('sms.response')->with('success', 'SMS couldnot sent succesfully');
+            return redirect()->route('sms.response')->with('danger', 'SMS couldnot sent succesfully');
         }
     }
 
